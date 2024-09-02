@@ -43,3 +43,30 @@ python3 manage.py makemigration
 python3 manage.py migrate
 
 python3 manage.py runserver
+
+Install React
+
+npx create-react-app frontend
+
+nmp start
+
+Create components folder in src
+
+Once both frontend and backend servers are started.
+
+frontend and backend can communicate with each other using django-cors-headers
+
+Install django-cors-headers and configure it in settings.py
+add below code:
+CORS_ALLOWED_ORIGINS = [
+    http://localhost:3000/
+]
+
+Also add 'corsheaders' in Installed apps and 'corsheaders.middleware.CorsMiddleware' in middleware.
+
+npm i install react-router-dom
+
+python3 manage.py makemigrations
+
+python3 manage.py migrate
+
